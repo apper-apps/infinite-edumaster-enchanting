@@ -19,24 +19,29 @@ export const videoService = {
     return { ...video };
   },
 
-  async create(videoData) {
+async create(videoData) {
     await delay(400);
     const newVideo = {
       Id: Math.max(...videos.map(v => v.Id), 0) + 1,
       ...videoData,
+      isHtmlDescription: videoData.isHtmlDescription || false,
       createdAt: new Date().toISOString()
     };
     videos.unshift(newVideo);
     return { ...newVideo };
   },
 
-  async update(id, updates) {
+async update(id, updates) {
     await delay(300);
     const index = videos.findIndex(v => v.Id === id);
     if (index === -1) {
       throw new Error("Video not found");
     }
-    videos[index] = { ...videos[index], ...updates };
+    videos[index] = { 
+      ...videos[index], 
+      ...updates,
+      isHtmlDescription: updates.isHtmlDescription !== undefined ? updates.isHtmlDescription : videos[index].isHtmlDescription
+    };
     return { ...videos[index] };
   },
 

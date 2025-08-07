@@ -19,24 +19,29 @@ export const blogService = {
     return { ...blog };
   },
 
-  async create(blogData) {
+async create(blogData) {
     await delay(400);
     const newBlog = {
       Id: Math.max(...blogs.map(b => b.Id), 0) + 1,
       ...blogData,
+      isHtmlContent: blogData.isHtmlContent || false,
       createdAt: new Date().toISOString()
     };
     blogs.unshift(newBlog);
     return { ...newBlog };
   },
 
-  async update(id, updates) {
+async update(id, updates) {
     await delay(300);
     const index = blogs.findIndex(b => b.Id === id);
     if (index === -1) {
       throw new Error("Blog post not found");
     }
-    blogs[index] = { ...blogs[index], ...updates };
+    blogs[index] = { 
+      ...blogs[index], 
+      ...updates,
+      isHtmlContent: updates.isHtmlContent !== undefined ? updates.isHtmlContent : blogs[index].isHtmlContent
+    };
     return { ...blogs[index] };
   },
 

@@ -4,8 +4,8 @@ import Input from "@/components/atoms/Input";
 import Textarea from "@/components/atoms/Textarea";
 import Label from "@/components/atoms/Label";
 import RoleCheckboxes from "@/components/molecules/RoleCheckboxes";
+import RichTextEditor from "@/components/atoms/RichTextEditor";
 import ApperIcon from "@/components/ApperIcon";
-
 const BlogUploadModal = ({ isOpen, onClose, onSubmit, initialData = null }) => {
   const [formData, setFormData] = useState({
     title: initialData?.title || "",
@@ -77,26 +77,17 @@ const BlogUploadModal = ({ isOpen, onClose, onSubmit, initialData = null }) => {
             />
           </div>
 
-          <div className="space-y-2">
-            <div className="flex items-center justify-between">
-              <Label htmlFor="content">본문 *</Label>
-              <label className="flex items-center text-sm">
-                <input
-                  type="checkbox"
-                  checked={formData.isHtmlContent}
-                  onChange={(e) => setFormData(prev => ({ ...prev, isHtmlContent: e.target.checked }))}
-                  className="mr-2"
-                />
-                HTML로 작성
-              </label>
-            </div>
-            <Textarea
+<div className="space-y-2">
+            <Label htmlFor="content">본문 *</Label>
+            <RichTextEditor
               id="content"
               value={formData.content}
-              onChange={(e) => setFormData(prev => ({ ...prev, content: e.target.value }))}
+              onChange={(value) => setFormData(prev => ({ ...prev, content: value }))}
+              placeholder="글 내용을 입력하세요"
+              htmlPlaceholder="HTML 태그를 사용할 수 있습니다"
+              isHtml={formData.isHtmlContent}
+              onHtmlToggle={(isHtml) => setFormData(prev => ({ ...prev, isHtmlContent: isHtml }))}
               rows={15}
-              placeholder={formData.isHtmlContent ? "HTML 태그를 사용할 수 있습니다" : "글 내용을 입력하세요"}
-              className="font-mono"
               required
             />
           </div>
