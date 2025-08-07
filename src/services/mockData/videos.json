@@ -1,0 +1,66 @@
+[
+  {
+    "Id": 1,
+    "title": "React 기초부터 고급까지",
+    "description": "React의 기본 개념부터 고급 패턴까지 체계적으로 학습하는 완전한 강의 시리즈입니다. 컴포넌트 설계, 상태 관리, 성능 최적화 등을 다룹니다.",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    "curriculumUrls": [
+      "https://www.youtube.com/watch?v=dGcsHMXbSOA",
+      "https://www.youtube.com/watch?v=Tn6-PIqc4UM",
+      "https://www.youtube.com/watch?v=hQAHSlTtcmY"
+    ],
+    "allowedRoles": ["member", "both"],
+    "isPinned": true,
+    "category": "membership",
+    "isHtmlDescription": false,
+    "createdAt": "2024-01-15T09:00:00.000Z"
+  },
+  {
+    "Id": 2,
+    "title": "JavaScript 마스터 클래스",
+    "description": "JavaScript의 핵심 개념과 최신 ES6+ 문법을 마스터하여 전문 개발자로 성장할 수 있는 완전한 학습 과정입니다.",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    "curriculumUrls": [
+      "https://www.youtube.com/watch?v=DHjqpvDnNGE",
+      "https://www.youtube.com/watch?v=hdI2bqOjy3c",
+      "https://www.youtube.com/watch?v=jS4aFq5-91M"
+    ],
+    "allowedRoles": ["master", "both"],
+    "isPinned": false,
+    "category": "master",
+    "isHtmlDescription": false,
+    "createdAt": "2024-01-20T14:30:00.000Z"
+  },
+  {
+    "Id": 3,
+    "title": "웹 디자인 기초",
+    "description": "HTML, CSS를 활용한 반응형 웹 디자인의 기초부터 실무 활용까지 배우는 입문자를 위한 강의입니다.",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    "curriculumUrls": [
+      "https://www.youtube.com/watch?v=G3e-cpL7ofc",
+      "https://www.youtube.com/watch?v=yfoY53QXEnI"
+    ],
+    "allowedRoles": ["free", "member", "master", "both"],
+    "isPinned": false,
+    "category": "membership",
+    "isHtmlDescription": false,
+    "createdAt": "2024-01-25T11:15:00.000Z"
+  },
+  {
+    "Id": 4,
+    "title": "고급 백엔드 아키텍처",
+    "description": "<strong>마이크로서비스</strong> 아키텍처와 <em>클라우드 네이티브</em> 개발 패턴을 학습하는 고급 과정입니다. 실제 프로덕션 환경에서의 시스템 설계와 운영을 다룹니다.",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    "curriculumUrls": [
+      "https://www.youtube.com/watch?v=j1gU2oGFayY",
+      "https://www.youtube.com/watch?v=QG8l2KkWHCs",
+      "https://www.youtube.com/watch?v=lJYCn1rBZlg",
+      "https://www.youtube.com/watch?v=BtdQmWyqJkk"
+    ],
+    "allowedRoles": ["master", "both"],
+    "isPinned": true,
+    "category": "master",
+    "isHtmlDescription": true,
+    "createdAt": "2024-02-01T16:45:00.000Z"
+  }
+]
